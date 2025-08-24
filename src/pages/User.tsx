@@ -90,7 +90,7 @@ const UserPage = () => {
       setIsEditing(false);
 
       login(updatedUser, token);
-    } catch (error) {
+} catch (error) {
       console.error("Update user failed:", error);
       toast.error("Cập nhật thất bại.");
     }
@@ -188,7 +188,7 @@ const UserPage = () => {
               >
                 Lưu
               </button>
-              <button
+<button
                 onClick={() => {
                   setIsEditing(false);
                   setEditForm(user);
@@ -258,7 +258,7 @@ const UserPage = () => {
 
 
   {/* Voucher đã lưu */}
-      {savedVouchers.length > 0 && ( // sửa lại: > 0 thay vì >= 0
+      {/* {savedVouchers.length > 0 && ( // sửa lại: > 0 thay vì >= 0
         <div className="mb-6 p-4 border rounded-xl shadow-sm bg-white">
           <h2 className="font-semibold text-lg mb-3 text-green-700">
             🎟️ Mã giảm giá của bạn
@@ -276,7 +276,7 @@ const UserPage = () => {
                 <p className="text-gray-700">
                   {v.discountId?.discount_type === "%"
                     ? `Giảm ${v.discountId?.discount_value ?? 0}%`
-                    : `Giảm ${(v.discountId?.discount_value ?? 0).toLocaleString()}đ`}
+: `Giảm ${(v.discountId?.discount_value ?? 0).toLocaleString()}đ`}
                 </p>
 
                 <p className="text-gray-500 text-sm">
@@ -298,15 +298,15 @@ const UserPage = () => {
             ))}
           </div>
         </div>
-      )}
+      )} */}
 
 
 
       {/* Lịch sử mua hàng */}
-      <OrderHistory orders={orders} />
+      {/* <OrderHistory orders={orders} /> */}
 
       {/* Đăng xuất */}
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <button
           onClick={() => {
             logout();
@@ -316,7 +316,7 @@ const UserPage = () => {
         >
           Đăng xuất
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
